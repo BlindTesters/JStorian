@@ -7,10 +7,21 @@
         height="100">
 </p>
 
+## Quickstart
+
+Import the library
+
+`import {getAllCalls, deepCopy} from '../JStorian/jstorian.mjs';`
+
+<p align="center">
+    <img 
+    src="./docs/images/ast.png">
+</p>
+
 ## License
 
 All rights reserved.
 
-Images is under public domain and created by *BartM* from [creazilla.com](https://creazilla.com) :
+Image is under public domain and created by *BartM* from [creazilla.com](https://creazilla.com) :
 
-- [Archeologist penguin](https://creazilla.com/nodes/48141-detective-emoji-clipart)
+- [Archeologist penguin](https://creazilla.com/fr/nodes/12487-archeologist-penguin-clipart)
