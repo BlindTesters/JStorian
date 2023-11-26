@@ -2,8 +2,7 @@
     "name": "JStorian",
     "version": "1.0.0",
     "description": "Small library to find function calls and keep the AST of the execution before the call to recreate it.",
-    "main": "jstorian.mjs",
-    "type": "module",
+    "main": "jstorian.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },

@@ -1,5 +1,5 @@
-import * as esprima from 'esprima';
-import * as fs from 'fs';
+const esprima = require('esprima');
+const fs = require('fs');
 
 // Function to create a deep copy of an object
 function deepCopy(o){
@@ -15,10 +15,14 @@ function findCalls(node, functionName) {
     switch (node.type) {
         case 'ExpressionStatement':
             if(node.expression.callee !== undefined) {
+              if (node.expression.callee.name !== undefined) {
+                return node.expression.callee.name == functionName;
+              } else{
                 return  node.expression.callee.property.name == functionName
+              }
             }
             else if(node.expression.right !== undefined) {
-                if(node.expression.right.callee.property !== undefined){
+                if(node.expression.right.callee !== undefined && node.expression.right.callee.property !== undefined){
                     return node.expression.right.callee.property.name == functionName
                 }
             }
@@ -97,4 +101,4 @@ function getAllCalls(scriptPath, functionName) {
     }
 }
 
-export {getAllCalls, deepCopy}
+module.exports = {getAllCalls, deepCopy}
